@@ -51,6 +51,9 @@ b = model.params['r_prev_dt']
 k = -b
 theta = a / k
 
-r_0 = r.iloc[-1
-             ]
-sigma, k, theta, r_0
+r_0 = r.iloc[-1]
+
+print(f"sigma : {sigma}\nk : {k}\ntheta :  {theta}\nr_0 :  {r_0}")
+
+
+# %%
