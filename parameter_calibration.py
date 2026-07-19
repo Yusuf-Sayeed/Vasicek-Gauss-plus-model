@@ -51,4 +51,6 @@ b = model.params['r_prev_dt']
 k = -b
 theta = a / k
 
-sigma, k, theta
+r_0 = r.iloc[-1
+             ]
+sigma, k, theta, r_0
