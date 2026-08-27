@@ -1,2 +1,6 @@
+# Python cache
 __pycache__/
 *.pyc
+
+# Personal/draft explanation
+Explanation_for_parameters_and_vasicek_tree_draft.docx

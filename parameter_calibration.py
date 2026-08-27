@@ -9,7 +9,6 @@ raw_data = pd.read_excel("Auctions_of_91_Day_Government_of_India_Treasury_Bills.
 # %%
 raw_data = raw_data[raw_data.iloc[:, 3] != 0].reset_index(drop=True)
 
-
 # %%
 r = raw_data.iloc[:, 3] / 100
 r.describe()
@@ -28,13 +27,12 @@ r_prev = r.shift(1)
 r_prev
 
 # %%
-r_prev__dt = r_prev * dt
+r_prev_dt = r_prev * dt
 # %%
-reg_data = pd.DataFrame({"dt": dt, "dr": dr, "r_prev": r_prev, "r_prev_dt" : r_prev__dt})
+reg_data = pd.DataFrame({"dt": dt, "dr": dr, "r_prev": r_prev, "r_prev_dt" : r_prev_dt})
 reg_data = reg_data.dropna().reset_index(drop=True)
 reg_data
 # %%
-
 
 x = reg_data[["dt", "r_prev_dt"]]
 y = reg_data["dr"]

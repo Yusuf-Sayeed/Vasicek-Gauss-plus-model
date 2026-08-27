@@ -47,4 +47,3 @@ V_lower = M2_lower - M1_lower**2
 q = (M1_lower - r_mid)**2 / (V_lower + (M1_lower - r_mid)**2)
 r_dd_new = r_mid + (M1_lower - r_mid) / q
 r_dd_new
-# %%
