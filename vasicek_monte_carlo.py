@@ -25,6 +25,8 @@ for t in range(n_steps):
 paths
 paths[:, -1].mean(), paths[:, -1].std()
 
+
+# Visualisation
 # %%
 time_axis = np.linspace(0, n_steps*dt_tree, n_steps+1)
 
@@ -45,4 +47,24 @@ plt.ylabel('Short Rate')
 plt.legend()
 plt.tight_layout()
 plt.show()
+
+# Expected Rate
+
 # %%
+def expected_rate(T):
+
+    expected_rate = r0*np.exp(-k*T) + (theta * (1 - np.exp(-k*T)))
+
+    return expected_rate
+
+# %%
+
+# Half Life
+
+def half_life():
+    tau = np.log(2) / k
+    return tau
+
+# %%
+expected_rate(5), half_life()
+
